@@ -8,4 +8,15 @@ class Appointment(db.Model):
     startDate = db.Column(db.Date)
     endDate = db.Column(db.Date)
     createdOn = db.Column(db.Date)
-    priority = PriorityEnum
+    priority = PriorityEnum()
+
+    def json(self):
+        return {
+            "id": self.id,
+            "title": self.title,
+            "description":self.description,
+            "startDate":self.startDate,
+            "endDate":self.endDate,
+            "createdOn":self.createdOn,
+            "priority":self.priority
+        }
