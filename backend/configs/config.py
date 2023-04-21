@@ -3,12 +3,13 @@ from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 import os
 
-app = Flask[__name__]
+app = Flask(__name__)
 
 #obter caminho atual
 caminho_atual = os.path.dirname(os.path.abspath(__file__))
+caminhopai = os.path.dirname(caminho_atual)
 #entrar na pasta database
-pasta = os.path.join(caminho_atual, 'database/')
+pasta = os.path.join(caminhopai, 'database/')
 #local do banco de dados
 arquivodb = os.path.join(pasta, 'dados.db')
 
