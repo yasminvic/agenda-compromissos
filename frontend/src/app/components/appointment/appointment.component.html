@@ -1,5 +1,13 @@
-<div>
-  <div *ngFor="let appointment of appointmentList">
-    <h1>{{appointment.title}}</h1>
+<div class="row">
+  <div *ngFor="let appointment of appointmentList" class="col-sm-6 mb-3 mb-sm-0">
+    <div class="card w-50 bg-card">
+      <div class="card-body position-relative">
+        <h4 class="card-title title fw-bold">{{appointment.title}}</h4>
+        <small class="position-absolute top-0 end-0 me-3 mt-3">{{appointment.priority}}</small>
+        <p class="card-text">{{appointment.description}}</p>
+        <p class="card-text float-start">{{appointment.startDate}}</p>
+        <p class="card-text float-end">{{appointment.startDate}}</p>
+      </div>
+    </div>
   </div>
 </div>
