@@ -1,7 +1,7 @@
 from configs.config import *
 from models import *
 
-@app.route("/incluir", methods=['POST'])
+@app.route("/incluir", methods=["POST"])
 def incluir():
     data = request.get_json()
 
@@ -14,3 +14,5 @@ def incluir():
         resp = jsonify({"result":"Error", "details":str(error)})
 
     return resp
+
+

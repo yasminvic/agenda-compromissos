@@ -1,9 +1,9 @@
 from configs.config import *
 from models import *
 
-@app.route("/get/<string:classe>")
-def get(classe):
-    data = db.session.query(classe).all()
+@app.route("/getAll")
+def getAll():
+    data = db.session.query(Appointment).all()
 
     if data:
         data_json = []

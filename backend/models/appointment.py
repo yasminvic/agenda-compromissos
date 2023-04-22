@@ -12,7 +12,6 @@ class Appointment(db.Model):
 
     def json(self):
         return {
-            "id": self.id,
             "title": self.title,
             "description":self.description,
             "startDate":self.startDate,
@@ -20,3 +19,6 @@ class Appointment(db.Model):
             "createdOn":self.createdOn,
             "priority":self.priority
         }
+    
+
+    
