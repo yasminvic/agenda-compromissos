@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,7 @@ import { AppointmentComponent } from './components/appointment/appointment.compo
 import { HomeComponent } from './pages/home/home.component';
 import { ModalFormAppointmentComponent } from './components/modal/modal-form-appointment/modal-form-appointment.component';
 
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -17,7 +19,7 @@ import { ModalFormAppointmentComponent } from './components/modal/modal-form-app
         FooterComponent,
         AppointmentComponent,
         HomeComponent,
-        ModalFormAppointmentComponent,
+        ModalFormAppointmentComponent
     ],
     providers: [],
     bootstrap: [AppComponent],
@@ -25,6 +27,8 @@ import { ModalFormAppointmentComponent } from './components/modal/modal-form-app
         BrowserModule,
         AppRoutingModule,
         HttpClientModule,
+        FormsModule,
+        ReactiveFormsModule
     ]
 })
 export class AppModule { }

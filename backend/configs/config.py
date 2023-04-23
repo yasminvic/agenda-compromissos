@@ -19,4 +19,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{arquivodb}'
 #Uma configuração para habilitar ou desabilitar o rastreamento de modificações de objetos.
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
+app.config['SECRET_KEY'] = 'the quick brown fox jumps over the lazy   dog'
+app.config['CORS_HEADERS'] = 'Content-Type'
+
 db = SQLAlchemy(app)

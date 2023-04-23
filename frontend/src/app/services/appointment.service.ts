@@ -11,9 +11,15 @@ import { ApiReturn } from '../models/api-return';
 export class AppointmentService {
 
   constructor(public http:HttpClient) { }
-  url = "getAll";
+  url = "Appointment";
 
   public getAll(){
-    return this.http.get<ApiReturn>(`${environment.apiUrl}/${this.url}`);
+    return this.http.get<ApiReturn>(`${environment.apiUrl}/getAll`);
+  }
+
+  public create(appointment: Appointment): Observable<Appointment>{
+    
+    return this.http.post<Appointment>(`${environment.apiUrl}/post`, appointment);
+
   }
 }
