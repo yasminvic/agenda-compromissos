@@ -18,8 +18,8 @@ export class AppointmentService {
   }
 
   public create(appointment: Appointment): Observable<Appointment>{
-    
-    return this.http.post<Appointment>(`${environment.apiUrl}/post`, appointment);
+
+    return this.http.post<Appointment>(`${environment.apiUrl}/incluir`, appointment);
 
   }
 }

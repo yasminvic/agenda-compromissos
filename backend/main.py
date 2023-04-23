@@ -4,7 +4,7 @@ from routes import *
 
 with app.app_context():
     db.create_all()
-    CORS(app, support_credentials=True)
+    CORS(app, resources={r"/*": {"origins": "*"}}, support_credentials=True)
     # CORS(app, resource={
     # r"/*":{
     #     "origins":"*"

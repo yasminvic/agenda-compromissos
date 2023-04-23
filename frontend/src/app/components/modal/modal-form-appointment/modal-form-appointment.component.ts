@@ -34,11 +34,12 @@ export class ModalFormAppointmentComponent implements OnInit{
     appointment.createdOn = "hoje";
 
     console.log(appointment);
-    
+
     this.service.create(appointment).subscribe(
       (resp)=>{
-        console.log(appointment.title, resp);
+
       }
     )
+    
   }
 }

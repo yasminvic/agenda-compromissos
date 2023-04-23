@@ -2,8 +2,9 @@ from flask_cors import cross_origin
 from configs.config import *
 from models import *
 
+
 @app.route("/incluir", methods=["POST"])
-@cross_origin(origin='*',headers='*', methods= '*')
+@cross_origin(allow_headers=['Content-Type'], origins='*')
 def incluir():
     data = request.get_json()
 
