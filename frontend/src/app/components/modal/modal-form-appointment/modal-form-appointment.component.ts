@@ -31,7 +31,7 @@ export class ModalFormAppointmentComponent implements OnInit{
   createAppointment():void{
 
     const appointment: Appointment = this.formulario.value;
-    appointment.createdOn = "hoje";
+    //appointment.createdOn = Date.now();
 
     console.log(appointment);
 
@@ -40,6 +40,6 @@ export class ModalFormAppointmentComponent implements OnInit{
 
       }
     )
-    
+
   }
 }

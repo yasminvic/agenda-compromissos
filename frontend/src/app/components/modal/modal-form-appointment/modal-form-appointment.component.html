@@ -1,30 +1,30 @@
 
 <div class="modal-header">
-  <button type="button" class="close" (click)="activeModal.dismiss()" aria-label="Fechar">
+  <button type="button" class="close btn btn-danger" (click)="activeModal.dismiss()" aria-label="Fechar">
     <span aria-hidden="true" class="float-end">&times;</span>
   </button>
-  <h5 class="modal-title float-start">Modal title</h5>
+  <h5 class="modal-title float-start title-darkblue fw-bold fs-4">Cadastrar Compromisso</h5>
 </div>
-<div class="modal-body" *ngIf="formulario">
+<div class="modal-body">
   <form [formGroup]="formulario" class="row g-3" action="#" (ngSubmit)="createAppointment()">
     <div class="col-md-6">
-      <label for="inputTitle" class="form-label">Title</label>
+      <label for="inputTitle" class="form-label fw-bold fs-5">Título</label>
       <input formControlName="title" type="text" class="form-control" id="inputTitle">
     </div>
     <div class="col-md-6">
-      <label for="inputPriority" class="form-label">Priority</label>
+      <label for="inputPriority" class="form-label">Grau de Prioridade</label>
       <input formControlName="priority" type="text" class="form-control" id="inputPriority">
     </div>
     <div class="col-12">
-      <label for="inputDescription" class="form-label">Description</label>
-      <textarea formControlName="description" class="form-control" id="inputDescription" placeholder="1234 Main St"></textarea>
+      <label for="inputDescription" class="form-label">Descrição</label>
+      <textarea formControlName="description" class="form-control" id="inputDescription" placeholder=""></textarea>
     </div>
     <div class="col-md-6">
-      <label for="inputStartDate" class="form-label">Start Date</label>
+      <label for="inputStartDate" class="form-label">Começa em:</label>
       <input formControlName="startDate" type="date" class="form-control" id="inputStartDate">
     </div>
     <div class="col-md-6">
-      <label for="inputEndDate" class="form-label">End Date</label>
+      <label for="inputEndDate" class="form-label">Termina em:</label>
       <input formControlName="endDate" type="date" class="form-control" id="inputEndDate">
     </div>
     <div class="col-12 mt-5">
@@ -33,5 +33,5 @@
   </form>
 </div>
 <div class="modal-footer">
-  <button type="button" class="btn btn-outline-dark" (click)="activeModal.close()">Close</button>
+  <button type="button" class="btn btn-dark" (click)="activeModal.close()">Close</button>
 </div>
