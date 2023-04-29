@@ -1,6 +1,6 @@
-import { JsonPipe } from '@angular/common';
+import { Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, FormsModule } from '@angular/forms';
+import { FormControl, FormGroup} from '@angular/forms';
 import { NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 import { Appointment } from 'src/app/models/appointment';
 import { AppointmentService } from 'src/app/services/appointment.service';
@@ -15,7 +15,8 @@ import { AppointmentService } from 'src/app/services/appointment.service';
 export class ModalFormAppointmentComponent implements OnInit{
   formulario: any;
 
-  constructor(public activeModal: NgbActiveModal, public service: AppointmentService){}//variavel que serve pra fechar o modal
+  constructor(public activeModal: NgbActiveModal,
+              public service: AppointmentService,){}//variavel que serve pra fechar o modal
 
 
   ngOnInit():void{
@@ -30,10 +31,8 @@ export class ModalFormAppointmentComponent implements OnInit{
 
   createAppointment():void{
 
+    console.log(this.formulario.value);
     const appointment: Appointment = this.formulario.value;
-    //appointment.createdOn = Date.now();
-
-    console.log(appointment);
 
     this.service.create(appointment).subscribe(
       (resp)=>{

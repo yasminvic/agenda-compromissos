@@ -7,7 +7,6 @@ class Appointment(db.Model):
     description = db.Column(db.Text)
     startDate = db.Column(db.Text)
     endDate = db.Column(db.Text)
-    createdOn = db.Column(db.Text)
     priority = db.Column(db.Text)
 
     def json(self):
@@ -16,7 +15,6 @@ class Appointment(db.Model):
             "description":self.description,
             "startDate":self.startDate,
             "endDate":self.endDate,
-            "createdOn":self.createdOn,
             "priority":self.priority
         }
     

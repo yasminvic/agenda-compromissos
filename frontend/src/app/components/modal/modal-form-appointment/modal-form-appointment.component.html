@@ -8,30 +8,30 @@
 <div class="modal-body">
   <form [formGroup]="formulario" class="row g-3" action="#" (ngSubmit)="createAppointment()">
     <div class="col-md-6">
-      <label for="inputTitle" class="form-label fw-bold fs-5">Título</label>
+      <label for="inputTitle" class="form-label fs-5">Título</label>
       <input formControlName="title" type="text" class="form-control" id="inputTitle">
     </div>
     <div class="col-md-6">
-      <label for="inputPriority" class="form-label">Grau de Prioridade</label>
+      <label for="inputPriority" class="form-label fs-5">Grau de Prioridade</label>
       <input formControlName="priority" type="text" class="form-control" id="inputPriority">
     </div>
     <div class="col-12">
-      <label for="inputDescription" class="form-label">Descrição</label>
+      <label for="inputDescription" class="form-label fs-5">Descrição</label>
       <textarea formControlName="description" class="form-control" id="inputDescription" placeholder=""></textarea>
     </div>
     <div class="col-md-6">
-      <label for="inputStartDate" class="form-label">Começa em:</label>
+      <label for="inputStartDate" class="form-label fs-5">Começa em:</label>
       <input formControlName="startDate" type="date" class="form-control" id="inputStartDate">
     </div>
     <div class="col-md-6">
-      <label for="inputEndDate" class="form-label">Termina em:</label>
+      <label for="inputEndDate" class="form-label fs-5">Termina em:</label>
       <input formControlName="endDate" type="date" class="form-control" id="inputEndDate">
     </div>
     <div class="col-12 mt-5">
-      <button type="submit" (click)="activeModal.dismiss()" class="btn btn-primary w-100 btn-block">Create</button>
+      <button type="submit" (click)="activeModal.dismiss()" class="btn btn-primary w-100 btn-block btn-lg text-white">Create</button>
     </div>
   </form>
 </div>
 <div class="modal-footer">
-  <button type="button" class="btn btn-dark" (click)="activeModal.close()">Close</button>
+  <button type="button" class="btn btn-dark btn-lg" (click)="activeModal.close()">Close</button>
 </div>

@@ -5,7 +5,6 @@ export class Appointment {
   description?:string;
   startDate?:string;
   endDate?:string;
-  createdOn?: string;
   priority?:string;
 
   constructor(obj: Partial<ApiReturn>){

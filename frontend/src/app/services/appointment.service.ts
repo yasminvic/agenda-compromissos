@@ -18,7 +18,7 @@ export class AppointmentService {
   }
 
   public create(appointment: Appointment): Observable<Appointment>{
-
+      console.log('oi');
     return this.http.post<Appointment>(`${environment.apiUrl}/incluir`, appointment);
 
   }
