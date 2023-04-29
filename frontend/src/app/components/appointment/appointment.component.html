@@ -6,8 +6,16 @@
         <img src="src\assets\img\plus.png" alt="">
         <small class="position-absolute top-0 end-0 me-3 mt-3">{{appointment.priority}}</small>
         <p class="card-text">{{appointment.description}}</p>
-        <p class="card-text float-start">{{appointment.startDate}}</p>
-        <p class="card-text float-end">{{appointment.startDate}}</p>
+        <div class="float-start">
+          <small class="fw-semibold">Começa em:</small>
+          <p class="card-text ">{{appointment.startDate}}</p>
+        </div>
+
+        <div class="float-end">
+          <small class="fw-semibold">Termina em:</small>
+          <p class="card-text">{{appointment.endDate}}</p>
+        </div>
+
       </div>
     </div>
   </div>
