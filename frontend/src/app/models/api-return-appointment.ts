@@ -1,10 +1,10 @@
 import { Appointment } from "./appointment";
 
-export class ApiReturn {
+export class ApiReturnAppointment {
   details?: Appointment[];
   result?: string;
 
-  constructor(obj: Partial<ApiReturn>){
+  constructor(obj: Partial<ApiReturnAppointment>){
     Object.assign(this, obj);
   }
 }

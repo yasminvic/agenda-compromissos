@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Appointment } from '../models/appointment';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
-import { ApiReturn } from '../models/api-return';
+import { ApiReturnAppointment } from '../models/api-return-appointment';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +14,7 @@ export class AppointmentService {
   url = "Appointment";
 
   public getAll(){
-    return this.http.get<ApiReturn>(`${environment.apiUrlGet}/${this.url}`);
+    return this.http.get<ApiReturnAppointment>(`${environment.apiUrlGet}/${this.url}`);
   }
 
   public create(appointment: Appointment): Observable<Appointment>{

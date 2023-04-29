@@ -1,4 +1,4 @@
-import { ApiReturn } from "./api-return";
+import {ApiReturnAppointment } from "./api-return-appointment";
 import { Priority } from "./priority";
 
 export class Appointment {
@@ -6,9 +6,10 @@ export class Appointment {
   description?:string;
   startDate?:string;
   endDate?:string;
+  priority_id?: number;
   priority?: Priority[];
 
-  constructor(obj: Partial<ApiReturn>){
+  constructor(obj: Partial<ApiReturnAppointment>){
     Object.assign(this, obj);
   }
 }

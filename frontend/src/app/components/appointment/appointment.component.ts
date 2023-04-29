@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ApiReturn } from 'src/app/models/api-return';
+import { ApiReturnAppointment } from 'src/app/models/api-return-appointment';
 import { Appointment } from 'src/app/models/appointment';
 import { AppointmentService } from 'src/app/services/appointment.service';
 
@@ -11,7 +11,7 @@ import { AppointmentService } from 'src/app/services/appointment.service';
 })
 export class AppointmentComponent implements OnInit{
 
-  public appointmentGetList$ = new Observable<ApiReturn>();
+  public appointmentGetList$ = new Observable<ApiReturnAppointment>();
   public appointmentList: Appointment[] | undefined = []
 
   constructor(public service:AppointmentService){}
@@ -22,7 +22,7 @@ export class AppointmentComponent implements OnInit{
     this.appointmentGetList$.subscribe(
       (resp) =>{
         this.appointmentList = resp.details;
-        console.log(resp.details)
+        //console.log(resp.details)
       }
     )
   }

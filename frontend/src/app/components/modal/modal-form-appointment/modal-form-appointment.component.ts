@@ -4,6 +4,10 @@ import { FormControl, FormGroup} from '@angular/forms';
 import { NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 import { Appointment } from 'src/app/models/appointment';
 import { AppointmentService } from 'src/app/services/appointment.service';
+import { Observable } from 'rxjs';
+import { Priority } from 'src/app/models/priority';
+import { PriorityService } from 'src/app/services/priority.service';
+import { ApiReturnPriority } from 'src/app/models/api-return-priority';
 
 @Component({
   selector: 'app-modal-form-appointment',
@@ -15,39 +19,44 @@ import { AppointmentService } from 'src/app/services/appointment.service';
 export class ModalFormAppointmentComponent implements OnInit{
   formulario: any;
 
+  //lista que vai acessar o get do Priority
+  public PriorityGetList$ = new Observable<ApiReturnPriority>();
+  //lista que vau ter dados do Priority
+  public priorityList: Priority[] | undefined = [];
+
   constructor(public activeModal: NgbActiveModal,
-              public service: AppointmentService,){}//variavel que serve pra fechar o modal
+              public serviceAppointment: AppointmentService,
+              public servicePriority: PriorityService){}//variavel que serve pra fechar o modal
 
 
   ngOnInit():void{
+    //criando formulario
     this.formulario = new FormGroup({
       title: new FormControl(null),
       description: new FormControl(null),
       startDate: new FormControl(null),
       endDate: new FormControl(null),
-      priority: new FormControl(null)
+      priority_id: new FormControl(null)
     });
 
-    $("#inputPriority").on("click", function(){
-      console.log("oi combobox");
-    });
-
+    //chamando dados para criar combombox
+    this.PriorityGetList$ = this.servicePriority.getPriority();
+    this.PriorityGetList$.subscribe(
+      (resp)=>{
+        this.priorityList = resp.details;
+      }
+    );
   }
 
+  //realizando o post do formulario
   createAppointment():void{
-
     console.log(this.formulario.value);
     const appointment: Appointment = this.formulario.value;
+    console.log(appointment.priority_id);
 
-    this.service.create(appointment).subscribe(
+    this.serviceAppointment.create(appointment).subscribe(
       (resp)=>{
-
       }
     )
-
   };
-
-  createComboBox(combo_id: number, name_class: string):void{
-    
-  }
 }
