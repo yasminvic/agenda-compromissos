@@ -8,7 +8,7 @@ import { AppointmentUrgentesComponent } from './pages/appointment-urgentes/appoi
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
-  {path: 'appointementUrgentes', component: AppointmentUrgentesComponent},
+  {path: 'appointmentUrgentes', component: AppointmentUrgentesComponent},
   {path: 'appointmentImportantes', component: AppointmentImportantesComponent},
   {path: 'appointmentRegulares', component: AppointmentRegularesComponent}
 ];

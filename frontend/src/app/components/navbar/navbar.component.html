@@ -1,8 +1,15 @@
 <!-- Side navigation -->
 <div class="sidenav">
-  <a href="#" class="fs-3"><i class="fa-solid fa-user"></i> Nome</a>
-  <a href="#" class="fs-3"><i class="fa-solid fa-house"></i> About</a>
-
-  <a href="#" class="fs-5">Clients</a>
-  <a href="#" class="fs-5">Contact</a>
+  <a href="#" class="fs-5"><i class="fa-solid fa-user"></i> Nome</a>
+  <a href="#" class="fs-5"><i class="fa-solid fa-house"></i> Home</a>
+  <div>
+    <a class="nav-link dropdown-toggle fs-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="fa-solid fa-calendar-days"></i> Agenda
+    </a>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="/appointementUrgentes">Urgentes</a></li>
+      <li><a class="dropdown-item" href="/appointementImportantes">Importantes</a></li>
+      <li><a class="dropdown-item" href="/appointementRegulares">Regulares</a></li>
+    </ul>
+  </div>
 </div>
