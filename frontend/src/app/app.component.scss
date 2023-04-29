@@ -2,5 +2,24 @@
 .main {
   margin-left: 180px; /* Same as the width of the sidebar */
   padding: 0px 10px;
-  
+
+}
+
+button{
+  background-color: #457b9d;
+}
+
+button:hover
+{
+  background-color: #1d3557;
+}
+
+button span{
+  color: #f1faee;
+}
+
+#fundo-cards{
+  background-color: #6c757d;
+  min-height: 80vh;
+  min-width: 150vh;
 }

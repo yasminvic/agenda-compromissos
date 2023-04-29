@@ -3,7 +3,6 @@
     <div class="card bg-card col my-4 ms-1 m-3 cards">
       <div class="card-body position-relative">
         <h4 class="card-title title fw-bold">{{appointment.title}}</h4>
-        <small class="position-absolute top-0 end-0 me-3 mt-3">{{appointment.priority}}</small>
         <p class="card-text">{{appointment.description}}</p>
         <div class="float-start">
           <small class="fw-semibold">Começa em:</small>
@@ -23,3 +22,4 @@
 <div *ngIf="appointmentList == null" class="text-center mt-5">
   <h1 class="fs-1 pt-5">Registre seu Compromisso</h1>
 </div>
+

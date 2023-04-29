@@ -1,5 +1,5 @@
 from configs.config import *
-from models.appointment import *
+from models import Appointment, Priority
 
 @app.route("/getByPriority/<int:id>")
 def getByPriority(id):

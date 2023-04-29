@@ -15,6 +15,11 @@ export class AppointmentService {
 
   public getAll(){
     return this.http.get<ApiReturnAppointment>(`${environment.apiUrlGet}/${this.url}`);
+
+  }
+
+  public getByPriority(priority:number){
+    return this.http.get<ApiReturnAppointment>(`${environment.apiUrlGetByPriority}/${priority}`);
   }
 
   public create(appointment: Appointment): Observable<Appointment>{

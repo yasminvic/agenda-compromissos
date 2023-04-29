@@ -11,8 +11,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AppointmentComponent } from './components/appointment/appointment.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ModalFormAppointmentComponent } from './components/modal/modal-form-appointment/modal-form-appointment.component';
-
-
+import { AppointmentUrgentesComponent } from './pages/appointment-urgentes/appointment-urgentes.component';
+import { AppointmentImportantesComponent } from './pages/appointment-importantes/appointment-importantes.component';
+import { AppointmentRegularesComponent } from './pages/appointment-regulares/appointment-regulares.component';
 
 @NgModule({
     declarations: [
@@ -21,7 +22,10 @@ import { ModalFormAppointmentComponent } from './components/modal/modal-form-app
         FooterComponent,
         AppointmentComponent,
         HomeComponent,
-        ModalFormAppointmentComponent
+        ModalFormAppointmentComponent,
+        AppointmentUrgentesComponent,
+        AppointmentImportantesComponent,
+        AppointmentRegularesComponent
     ],
     providers: [],
     bootstrap: [AppComponent],
