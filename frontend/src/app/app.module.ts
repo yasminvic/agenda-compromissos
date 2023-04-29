@@ -10,6 +10,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AppointmentComponent } from './components/appointment/appointment.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ModalFormAppointmentComponent } from './components/modal/modal-form-appointment/modal-form-appointment.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { ModalFormAppointmentComponent } from './components/modal/modal-form-app
         AppRoutingModule,
         HttpClientModule,
         FormsModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        NgbModule
     ]
 })
 export class AppModule { }

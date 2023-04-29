@@ -27,6 +27,11 @@ export class ModalFormAppointmentComponent implements OnInit{
       endDate: new FormControl(null),
       priority: new FormControl(null)
     });
+
+    $("#inputPriority").on("click", function(){
+      console.log("oi combobox");
+    });
+
   }
 
   createAppointment():void{
@@ -40,5 +45,9 @@ export class ModalFormAppointmentComponent implements OnInit{
       }
     )
 
+  };
+
+  createComboBox(combo_id: number, name_class: string):void{
+    
   }
 }

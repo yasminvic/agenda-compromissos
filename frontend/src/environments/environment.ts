@@ -1,4 +1,5 @@
 export const environment = {
   production : false,
-  apiUrl : "http://localhost:5000"
+  apiUrlPost : "http://localhost:5000/incluir/",
+  apiUrlGet: "http://localhost:5000/getAll/"
 }

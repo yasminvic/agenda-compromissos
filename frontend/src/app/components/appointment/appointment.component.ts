@@ -22,7 +22,7 @@ export class AppointmentComponent implements OnInit{
     this.appointmentGetList$.subscribe(
       (resp) =>{
         this.appointmentList = resp.details;
-        //console.log(resp.details)
+        console.log(resp.details)
       }
     )
   }

@@ -14,12 +14,12 @@ export class AppointmentService {
   url = "Appointment";
 
   public getAll(){
-    return this.http.get<ApiReturn>(`${environment.apiUrl}/getAll`);
+    return this.http.get<ApiReturn>(`${environment.apiUrlGet}/${this.url}`);
   }
 
   public create(appointment: Appointment): Observable<Appointment>{
       console.log('oi');
-    return this.http.post<Appointment>(`${environment.apiUrl}/incluir`, appointment);
+    return this.http.post<Appointment>(`${environment.apiUrlPost}/${this.url}`, appointment);
 
   }
 }

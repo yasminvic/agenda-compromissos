@@ -1,9 +1,13 @@
 from configs.config import *
-from models import Appointment
+from models import Appointment, Priority
 
-@app.route("/getAll")
-def getAll():
-    data = db.session.query(Appointment).all()
+@app.route("/getAll/<string:classe>")
+def getAll(classe):
+
+    if classe == "Appointment":
+        data = db.session.query(Appointment).all()
+    elif classe == "Priority":
+        data = db.session.query(Priority).all()
 
     if data:
         data_json = []
