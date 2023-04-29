@@ -1,5 +1,5 @@
 from configs.config import *
-from models import *
+from models import Appointment
 
 @app.route("/getAll")
 def getAll():

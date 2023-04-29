@@ -1,18 +1,23 @@
 from flask_cors import cross_origin
 from configs.config import *
-from models import *
+from models import Appointment, Priority
 
 
-@app.route("/incluir", methods=["POST"])
+@app.route("/incluir/<string:classe>", methods=["POST"])
 @cross_origin(allow_headers=['Content-Type'], origins='*')
-def incluir():
+def incluir(classe):
     data = request.get_json()
 
     try:
-        new = Appointment(**data)
+        if classe == "Appointment":
+            new = Appointment(**data)
+        elif classe == "Priority":
+            new = Priority(**data)
+
         db.session.add(new)
         db.session.commit()
         resp = jsonify({"result": "OK"})
+        
     except Exception as error:
         resp = jsonify({"result":"Error", "details":str(error)})
 
