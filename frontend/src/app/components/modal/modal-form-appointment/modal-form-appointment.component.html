@@ -13,7 +13,7 @@
     </div>
     <div class="col-md-6">
       <label for="inputPriority" class="form-label fs-5">Grau de Prioridade</label>
-      <select  formControlName="priority_id" class="form-control" id="inputPriority">
+      <select  formControlName="priority_id" class="form-select" id="inputPriority">
         <option *ngFor="let priority of priorityList" value="{{priority.id}}">{{priority.grau}}</option>
       </select>
     </div>
