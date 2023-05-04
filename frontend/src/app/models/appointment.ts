@@ -7,7 +7,7 @@ export class Appointment {
   startDate?:string;
   endDate?:string;
   priority_id?: number;
-  priority?: Priority[];
+  priority?: Priority;
 
   constructor(obj: Partial<ApiReturnAppointment>){
     Object.assign(this, obj);

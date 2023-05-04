@@ -3,7 +3,12 @@
     <div class="card bg-card col my-4 ms-1 m-3 cards">
       <div class="card-body position-relative">
         <h4 class="card-title title fw-bold">{{appointment.title}}</h4>
-        <small class="position-absolute top-0 end-0 me-3 mt-3">{{appointment.priority}}</small>
+        <small class="position-absolute top-0 end-0 me-3 ms-5 mt-3">
+          <span *ngIf="appointment.priority?.grau == 'Regular'" class="text-success ">🟢</span>
+          <span *ngIf="appointment.priority?.grau == 'Importante'" class="text-success ms-5">🟠</span>
+          <span *ngIf="appointment.priority?.grau == 'Urgente'" class="text-success ">🔴</span>
+          {{appointment.priority?.grau}}
+        </small>
         <p class="card-text">{{appointment.description}}</p>
         <div class="float-start">
           <small class="fw-semibold">Começa em:</small>

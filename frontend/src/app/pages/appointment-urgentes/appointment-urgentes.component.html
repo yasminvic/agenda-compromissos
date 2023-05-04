@@ -1,8 +1,10 @@
+<h1 class="text-center mb-5 mt-3">Compromissos Urgentes</h1>
+
 <div class="row d-flex justify-content-center container">
   <div *ngFor="let appointment of appointmentList" class="col-sm-3 mb-5 mb-sm-0 ">
     <div class="card bg-card col my-4 ms-1 m-3 cards">
       <div class="card-body position-relative">
-        <h4 class="card-title text-dark fw-bold">{{appointment.title}}</h4>
+        <h4 class="card-title text-white fw-bold">{{appointment.title}}</h4>
         <p class="card-text">{{appointment.description}}</p>
         <div class="float-start">
           <small class="fw-semibold">Começa em:</small>
