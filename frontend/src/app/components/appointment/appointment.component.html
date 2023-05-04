@@ -1,4 +1,4 @@
-<div class="row d-flex justify-content-center container">
+<div *ngIf="appointmentList != null" class="row d-flex justify-content-center container">
   <div *ngFor="let appointment of appointmentList" class="col-sm-3 mb-5 mb-sm-0 ">
     <div class="card bg-card col my-4 ms-1 m-3 cards">
       <div class="card-body position-relative">
@@ -25,6 +25,6 @@
   </div>
 </div>
 
-<div *ngIf="appointmentList != null" class="text-center mt-5">
+<div *ngIf="appointmentGetList$ == null" class="text-center mt-5">
   <h1 class="fs-1 pt-5">Registre seu Compromisso</h1>
 </div>
