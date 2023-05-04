@@ -14,6 +14,8 @@ with app.app_context():
         db.session.add(importante)
         db.session.add(regular)
         db.session.commit()
+
+    print(db.session.query(Priority).all())
     CORS(app, resources={r"/*": {"origins": "*"}}, support_credentials=True)
     # CORS(app, resource={
     # r"/*":{
